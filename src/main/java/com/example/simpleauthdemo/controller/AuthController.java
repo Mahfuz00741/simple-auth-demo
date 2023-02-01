@@ -11,19 +11,14 @@ import java.util.List;
 @RequestMapping(path = "api")
 public class AuthController {
 
-//    @RequestMapping("/")
-//    public String hello()
-//    {
-//        return "Hello javaTpoint";
-//    }
-
     @GetMapping(path = "/get")
     public String getValue() {
         return "Book";
     }
-//
-//    @GetMapping(path = "/get-list")
-//    public List<String> getList() {
-//        return Arrays.asList("Book", "pen");
-//    }
+
+    @GetMapping(path = "/get-list")
+    public List<String> getList() {
+        return Arrays.asList("Book", "pen");
+    }
+
 }
