@@ -29,7 +29,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
         String token = header.substring(7);
         Claims claims = Jwts.parser().setSigningKey(SECRET_KEY.getBytes()).parseClaimsJws(token).getBody();
-        request.setAttribute("claims", claims);
+        request.setAttribute("info", claims);
         filterChain.doFilter(request, response);
     }
 }
